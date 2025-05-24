@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MessageSquare, BarChart3, Headphones, Lock, Zap } from 'lucide-react';
+import { Phone, MessageSquare, Briefcase, Headphones, Lock, Sparkles } from 'lucide-react';
 
 const serviceItems = [
   {
@@ -13,9 +13,9 @@ const serviceItems = [
     description: "Deploy intelligent virtual assistants and chatbots that understand context, learn from interactions, and provide human-like experiences for your customers.",
   },
   {
-    icon: <BarChart3 className="h-12 w-12 text-blue-700" />,
-    title: "Analytics & Insights",
-    description: "Leverage powerful analytics tools to gain meaningful insights from customer interactions and improve your business processes.",
+    icon: <Briefcase className="h-12 w-12 text-blue-700" />,
+    title: "Professional Services Product Management",
+    description: "Comprehensive PSM focusing on development, launch, and management of service-based products, ensuring effective delivery while meeting customer needs and business objectives.",
   },
   {
     icon: <Headphones className="h-12 w-12 text-blue-700" />,
@@ -28,9 +28,9 @@ const serviceItems = [
     description: "Ensure your customer data is protected with enterprise-grade security solutions and compliance with industry regulations.",
   },
   {
-    icon: <Zap className="h-12 w-12 text-blue-700" />,
-    title: "Process Automation",
-    description: "Streamline operations with intelligent workflow automation that reduces manual tasks and increases efficiency.",
+    icon: <Sparkles className="h-12 w-12 text-blue-700" />,
+    title: "Generative AI Solutions",
+    description: "Harness the power of generative AI to create personalized content, automate responses, and enhance customer interactions with intelligent, context-aware solutions.",
   }
 ];
 

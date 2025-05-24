@@ -56,21 +56,6 @@ const Hero: React.FC = () => {
             </div>
           </div>
         </div>
-
-        <div className="mt-20 py-10 px-6 md:px-10 bg-white/5 backdrop-blur-sm rounded-xl">
-          <div className="text-center mb-10">
-            <h2 className="text-2xl font-semibold text-white mb-2">Trusted By Industry Leaders</h2>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-            {['Company A', 'Company B', 'Company C', 'Company D'].map((company, index) => (
-              <div key={index} className="flex justify-center">
-                <div className="h-12 w-36 bg-white/20 rounded-md flex items-center justify-center text-white font-semibold">
-                  {company}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cloud, Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Instagram, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -8,7 +8,16 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center mb-6">
-              <Cloud className="h-8 w-8 text-blue-400 mr-2" />
+              <img 
+                src="/logo.png" 
+                alt="CloudWest Logo" 
+                className="h-8 w-auto mr-3 filter brightness-0 invert"
+                onError={(e) => {
+                  // Fallback to SVG if PNG fails
+                  e.currentTarget.src = "/logo.svg";
+                  e.currentTarget.onerror = null;
+                }}
+              />
               <span className="text-2xl font-bold">CloudWest</span>
             </div>
             <p className="text-gray-400 mb-6">
@@ -46,9 +55,6 @@ const Footer: React.FC = () => {
                 <a href="#about" className="text-gray-400 hover:text-white transition-colors">About Us</a>
               </li>
               <li>
-                <a href="#team" className="text-gray-400 hover:text-white transition-colors">Our Team</a>
-              </li>
-              <li>
                 <a href="#contact" className="text-gray-400 hover:text-white transition-colors">Contact</a>
               </li>
             </ul>
@@ -64,10 +70,10 @@ const Footer: React.FC = () => {
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">Conversational AI</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Analytics & Insights</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Professional Services Management</a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Process Automation</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Generative AI Solutions</a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-colors">Security & Compliance</a>

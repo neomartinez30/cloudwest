@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Cloud } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,41 +29,46 @@ const Navbar: React.FC = () => {
   return (
     <nav 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-white/10 backdrop-blur-sm py-4'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <Cloud className="h-8 w-8 text-blue-700 mr-2" />
-            <span className="text-xl font-bold text-blue-900">CloudWest</span>
+            <img 
+              src="/logo.png" 
+              alt="CloudWest Logo" 
+              className="h-10 w-auto mr-3"
+              onError={(e) => {
+                // Fallback to SVG if PNG fails
+                e.currentTarget.src = "/logo.svg";
+                e.currentTarget.onerror = null;
+              }}
+            />
+            <span className={`text-xl font-bold ${isScrolled ? 'text-blue-900' : 'text-white'}`}>
+              CloudWest
+            </span>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('home')}
-              className="text-gray-700 hover:text-blue-700 transition-colors font-medium"
+              className={`${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'} transition-colors font-medium`}
             >
               Home
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-blue-700 transition-colors font-medium"
+              className={`${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'} transition-colors font-medium`}
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('about')}
-              className="text-gray-700 hover:text-blue-700 transition-colors font-medium"
+              className={`${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'} transition-colors font-medium`}
             >
               About
-            </button>
-            <button 
-              onClick={() => scrollToSection('team')}
-              className="text-gray-700 hover:text-blue-700 transition-colors font-medium"
-            >
-              Team
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
@@ -77,7 +82,7 @@ const Navbar: React.FC = () => {
           <div className="md:hidden">
             <button 
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-700"
+              className={`${isScrolled ? 'text-gray-700' : 'text-white'}`}
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -104,12 +109,6 @@ const Navbar: React.FC = () => {
               className="text-gray-700 hover:text-blue-700 transition-colors font-medium py-2"
             >
               About
-            </button>
-            <button 
-              onClick={() => scrollToSection('team')}
-              className="text-gray-700 hover:text-blue-700 transition-colors font-medium py-2"
-            >
-              Team
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
