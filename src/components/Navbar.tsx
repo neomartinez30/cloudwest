@@ -36,15 +36,15 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <img 
-              src="/logo.png" 
+              src="/logo transparency white.png" 
               alt="CloudWest Logo" 
               className="h-10 w-auto mr-3"
               onError={(e) => {
-                // Fallback to SVG if PNG fails
+              // Fallback to SVG if PNG fails
                 e.currentTarget.src = "/logo.svg";
                 e.currentTarget.onerror = null;
-              }}
-            />
+            }}
+          />
             <span className={`text-xl font-bold ${isScrolled ? 'text-blue-900' : 'text-white'}`}>
               CloudWest
             </span>
