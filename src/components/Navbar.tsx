@@ -71,6 +71,12 @@ const Navbar: React.FC = () => {
               About
             </button>
             <button 
+              onClick={() => scrollToSection('blog')}
+              className={`${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'} transition-colors font-medium`}
+            >
+              Blog
+            </button>
+            <button 
               onClick={() => scrollToSection('contact')}
               className="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded-md transition-colors"
             >
