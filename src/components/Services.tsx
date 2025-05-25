@@ -7,7 +7,7 @@ const primaryServices = [
     badgeIcon: <Zap className="h-4 w-4" />,
     badge: "Custom AI Automation",
     title: "Agentic AI Solutions",
-    subtitle: "Custom Intelligent Automation Architects",
+    subtitle: "Custom Intelligent Solutions",
     description: "Deploy AI agents that think, decide, and execute complex business processes autonomously. Reduce operational overhead by 60-80% through intelligent workflow automation tailored to your industry-specific challenges.",
     keyPoints: [
       "Autonomous process optimization",
@@ -62,7 +62,7 @@ const supportingServices = [
   },
   {
     icon: <Shield className="h-8 w-8 text-blue-600" />,
-    title: "Enterprise Security & Compliance",
+    title: "Security & Compliance",
     description: "Maintain enterprise-grade security and regulatory compliance throughout your AI transformation journey."
   }
 ];
@@ -74,14 +74,14 @@ const Services: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            AI-First Consulting Services
+          AI Transformation Services
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Specialized AI Solutions for Forward-Thinking Organizations
+          Three Pillars of Business Transformation
           </h2>
           <div className="w-24 h-1 bg-blue-700 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-            CloudWest provides three specialized service offerings that can be engaged independently or in combination, helping clients become early adopters and stay ahead of AI trends.
+            CloudWest provides three specialized offerings that can be engaged independently or in combination, helping clients create operational efficiencies and provide enhanced customer experiences.
           </p>
         </div>
 
@@ -155,28 +155,7 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-        {/* ROI Stats */}
-        <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-8">Proven Results Across AI Implementations</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div>
-              <div className="text-3xl font-bold text-teal-400 mb-2">60-80%</div>
-              <div className="text-blue-100 text-sm">Operational Cost Reduction</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-teal-400 mb-2">75%</div>
-              <div className="text-blue-100 text-sm">Faster Response Times</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-teal-400 mb-2">50+</div>
-              <div className="text-blue-100 text-sm">AI Implementations</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold text-teal-400 mb-2">3-6x</div>
-              <div className="text-blue-100 text-sm">Development Acceleration</div>
-            </div>
-          </div>
-        </div>
+
 
         {/* CTA */}
         <div className="mt-16 text-center">

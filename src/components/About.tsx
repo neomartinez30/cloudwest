@@ -20,7 +20,7 @@ const About: React.FC = () => {
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Architecting the Future Through Disciplined AI Strategy
+              Architecting the Future of Business Operations
             </h2>
             <div className="w-24 h-1 bg-blue-700 mb-8"></div>
             
@@ -52,16 +52,16 @@ const About: React.FC = () => {
             </div>
             
             <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-8 rounded-md transition-colors transform hover:scale-105">
-              Our AI-First Approach
+              Our AI-First Transformation Approach
             </button>
           </div>
         </div>
         
-        <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-12 shadow-lg">
+         <div className="bg-gradient-to-r from-gray-50 to-blue-50 rounded-2xl p-12 shadow-lg">
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Choose CloudWest?</h3>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-              We combine deep technical expertise with strategic business acumen to deliver AI-first solutions that exceed expectations and drive measurable ROI across organizations of all sizes.
+              We combine deep technical expertise with strategic business acumen to deliver AI transformation solutions that exceed enterprise expectations and drive measurable ROI.
             </p>
           </div>
           
@@ -102,7 +102,7 @@ const About: React.FC = () => {
               </div>
               <h4 className="text-xl font-semibold text-gray-900 mb-3">Measurable ROI</h4>
               <p className="text-gray-600 leading-relaxed">
-                AI-first solutions with quantifiable business outcomes and continuous performance optimization across all organizational scales.
+                Enterprise-grade solutions with quantifiable business outcomes and continuous performance optimization.
               </p>
             </div>
           </div>
@@ -111,29 +111,29 @@ const About: React.FC = () => {
         {/* Unique Market Position */}
         <div className="mt-20 bg-blue-900 rounded-2xl p-12 text-white">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Our AI-First Market Position</h3>
+            <h3 className="text-3xl font-bold mb-4">Our Unique Market Position</h3>
             <p className="text-blue-100 text-lg max-w-4xl mx-auto">
-              As forward-thinking organizations recognize AI's transformational potential, CloudWest provides the disciplined strategy and technical expertise needed to become successful early adopters.
+              The convergence of AI automation, product innovation, and customer experience creates unprecedented opportunities for enterprise transformation.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-teal-400">Disciplined AI Strategy</h4>
+              <h4 className="text-xl font-semibold mb-4 text-teal-400">End-to-End Transformation</h4>
               <p className="text-blue-100">
-                Strategic focus on AI implementations that deliver measurable business value and competitive advantage
+                Complete business transformation capability across three critical enterprise functions
               </p>
             </div>
             <div>
               <h4 className="text-xl font-semibold mb-4 text-teal-400">Technology-Agnostic Approach</h4>
               <p className="text-blue-100">
-                Vendor-neutral solutions ensuring optimal technology selection for your specific requirements and scale
+                Vendor-neutral solutions ensuring optimal technology selection for your specific requirements
               </p>
             </div>
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-teal-400">Early Adopter Advantage</h4>
+              <h4 className="text-xl font-semibold mb-4 text-teal-400">Proven Enterprise Experience</h4>
               <p className="text-blue-100">
-                Help organizations stay ahead of AI trends and implement cutting-edge solutions before competitors
+                Deep expertise in both emerging AI technologies and traditional enterprise system integration
               </p>
             </div>
           </div>
