@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Zap, Target, Users } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const scrollToContact = () => {
@@ -19,25 +19,47 @@ const Hero: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6 py-12 md:py-20 relative z-10">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-white">
+            <div className="inline-block bg-teal-500/20 text-teal-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fadeIn">
+              Enterprise AI Transformation Partners
+            </div>
+            
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fadeIn">
-              Transforming Customer Experiences through Intelligent Automation
+              Architect Intelligent Business Systems That <span className="text-teal-400">Transform Operations</span>
             </h1>
+            
             <p className="text-lg md:text-xl text-blue-100 mb-8 animate-fadeIn animation-delay-200">
-              CloudWest specializes in building next-generation contact center solutions and conversational AI experiences that drive business growth.
+              We architect intelligent business systems that transform how enterprises operate, innovate, and serve customers through AI-powered solutions, strategic product development, and next-generation contact experiences.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 animate-fadeIn animation-delay-400">
+            
+            <div className="flex flex-col sm:flex-row gap-4 animate-fadeIn animation-delay-400 mb-8">
               <button 
                 onClick={scrollToContact}
                 className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-6 rounded-md transition-all transform hover:scale-105 flex items-center justify-center"
               >
-                Get Started <ArrowRight className="ml-2 h-5 w-5" />
+                Start Your Transformation <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button 
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-transparent hover:bg-white/10 text-white border border-white font-medium py-3 px-6 rounded-md transition-all"
               >
-                Explore Our Services
+                Explore AI Solutions
               </button>
+            </div>
+            
+            {/* Key Differentiators */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 animate-fadeIn animation-delay-400">
+              <div className="flex items-center space-x-2">
+                <Zap className="h-5 w-5 text-teal-400" />
+                <span className="text-sm text-blue-100">Custom Agentic AI</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Target className="h-5 w-5 text-teal-400" />
+                <span className="text-sm text-blue-100">Product Acceleration</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="h-5 w-5 text-teal-400" />
+                <span className="text-sm text-blue-100">Intelligent Contact Centers</span>
+              </div>
             </div>
           </div>
           
@@ -49,7 +71,7 @@ const Hero: React.FC = () => {
               <div className="relative">
                 <img
                   src="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt="Modern contact center solution"
+                  alt="AI transformation and enterprise solutions"
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
                 />
               </div>

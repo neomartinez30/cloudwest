@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Target, Users, Zap, TrendingUp } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -9,44 +9,50 @@ const About: React.FC = () => {
           <div>
             <img 
               src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-              alt="CloudWest team meeting" 
+              alt="CloudWest enterprise AI transformation team" 
               className="rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300"
             />
           </div>
           
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">About CloudWest</h2>
+            <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              Enterprise AI Transformation Partners
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Architecting the Future of Enterprise Operations
+            </h2>
             <div className="w-24 h-1 bg-blue-700 mb-8"></div>
             
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              At CloudWest, we're passionate about revolutionizing how businesses connect with their customers through innovative contact center solutions and conversational AI.
+              CloudWest is the only consultancy that integrates AI automation, product development acceleration, and customer experience transformation into cohesive business transformation strategies.
             </p>
             
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Founded by a team of industry veterans with decades of combined experience, we understand the challenges businesses face in delivering exceptional customer experiences. Our mission is to simplify this journey with technology that feels human.
+              We architect intelligent business systems that transform how enterprises operate, innovate, and serve customers through custom agentic AI, strategic product development, and next-generation contact experiences.
             </p>
             
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                <p className="text-gray-700">Over 50+ successful enterprise implementations</p>
+                <p className="text-gray-700">60-80% operational cost reduction through intelligent automation</p>
               </div>
               <div className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                <p className="text-gray-700">Industry-leading customer satisfaction rates</p>
+                <p className="text-gray-700">3-6x faster product development acceleration</p>
               </div>
               <div className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                <p className="text-gray-700">Advanced AI solutions that deliver measurable ROI</p>
+                <p className="text-gray-700">75% improvement in customer response times</p>
               </div>
               <div className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                <p className="text-gray-700">Dedicated support team available 24/7</p>
+                <p className="text-gray-700">50+ successful enterprise AI implementations</p>
               </div>
             </div>
             
             <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-8 rounded-md transition-colors transform hover:scale-105">
-              Our Approach
+              Our Transformation Approach
             </button>
           </div>
         </div>
@@ -55,44 +61,79 @@ const About: React.FC = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Choose CloudWest?</h3>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-              We combine technical expertise with a deep understanding of customer experience to deliver solutions that exceed expectations.
+              We combine deep technical expertise with strategic business acumen to deliver AI transformation solutions that exceed enterprise expectations and drive measurable ROI.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="rounded-full bg-blue-100 w-16 h-16 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+                <Zap className="h-8 w-8 text-blue-700" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">Fast Implementation</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">AI-First Architecture</h4>
               <p className="text-gray-600 leading-relaxed">
-                Our solutions can be deployed quickly, allowing you to see results sooner without lengthy integration periods.
+                Custom agentic AI solutions that autonomously optimize business processes and reduce operational overhead.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="rounded-full bg-blue-100 w-16 h-16 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
+                <Target className="h-8 w-8 text-blue-700" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">Secure & Compliant</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Strategic Product Development</h4>
               <p className="text-gray-600 leading-relaxed">
-                Enterprise-grade security with compliance certifications to protect your sensitive customer data.
+                Accelerate time-to-market with expert product strategy, technical architecture, and go-to-market execution.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="rounded-full bg-blue-100 w-16 h-16 flex items-center justify-center mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-blue-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
+                <Users className="h-8 w-8 text-blue-700" />
               </div>
-              <h4 className="text-xl font-semibold text-gray-900 mb-3">Continuous Improvement</h4>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Intelligent CX Transformation</h4>
               <p className="text-gray-600 leading-relaxed">
-                Our AI systems learn and improve over time, ensuring your customer experience gets better with each interaction.
+                AI-powered contact center intelligence that transforms customer interactions and drives satisfaction scores.
+              </p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="rounded-full bg-blue-100 w-16 h-16 flex items-center justify-center mb-6">
+                <TrendingUp className="h-8 w-8 text-blue-700" />
+              </div>
+              <h4 className="text-xl font-semibold text-gray-900 mb-3">Measurable ROI</h4>
+              <p className="text-gray-600 leading-relaxed">
+                Enterprise-grade solutions with quantifiable business outcomes and continuous performance optimization.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Unique Market Position */}
+        <div className="mt-20 bg-blue-900 rounded-2xl p-12 text-white">
+          <div className="text-center mb-8">
+            <h3 className="text-3xl font-bold mb-4">Our Unique Market Position</h3>
+            <p className="text-blue-100 text-lg max-w-4xl mx-auto">
+              The convergence of AI automation, product innovation, and customer experience creates unprecedented opportunities for enterprise transformation.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            <div>
+              <h4 className="text-xl font-semibold mb-4 text-teal-400">End-to-End Transformation</h4>
+              <p className="text-blue-100">
+                Complete business transformation capability across three critical enterprise functions
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-4 text-teal-400">Technology-Agnostic Approach</h4>
+              <p className="text-blue-100">
+                Vendor-neutral solutions ensuring optimal technology selection for your specific requirements
+              </p>
+            </div>
+            <div>
+              <h4 className="text-xl font-semibold mb-4 text-teal-400">Proven Enterprise Experience</h4>
+              <p className="text-blue-100">
+                Deep expertise in both emerging AI technologies and traditional enterprise system integration
               </p>
             </div>
           </div>
