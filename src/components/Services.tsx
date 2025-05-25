@@ -155,6 +155,128 @@ const Services: React.FC = () => {
           </div>
         </div>
 
+        {/* Featured Apps Section */}
+        <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-12 mb-12">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-teal-100 text-teal-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+              In Development
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">Featured AI Applications</h3>
+            <div className="w-24 h-1 bg-teal-500 mx-auto mb-6"></div>
+            <p className="text-gray-600 max-w-3xl mx-auto text-lg">
+              Discover our upcoming AI-powered applications that showcase the transformative potential of agentic solutions across specialized industries.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Tele-Veterinarian App */}
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
+              <div className="absolute top-4 right-4">
+                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
+                  Coming Soon
+                </span>
+              </div>
+              
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.78 0-2.678-2.153-1.415-3.414l5-5A2 2 0 009 9.172V5L8 4z" />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">VetConnect AI</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Revolutionary tele-veterinarian platform that automates administrative workflows while connecting pet owners with a curated network of licensed veterinarians for real-time consultations.
+                </p>
+              </div>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                  <span>Automated appointment scheduling & medical records</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                  <span>AI-powered symptom assessment & triage</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                  <span>Seamless vet-to-vet consultation network</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mr-3"></div>
+                  <span>Integrated billing & insurance processing</span>
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-4">
+                <p className="text-sm text-gray-600 text-center">
+                  <strong>Currently in Development</strong><br/>
+                  Expected Beta Release: Q3 2025
+                </p>
+              </div>
+            </div>
+
+            {/* Executive Coach Multi-Agent App */}
+            <div className="bg-white rounded-xl p-8 shadow-lg border border-gray-100 relative overflow-hidden">
+              <div className="absolute top-4 right-4">
+                <span className="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-medium">
+                  Coming Soon
+                </span>
+              </div>
+              
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
+                  <svg className="h-8 w-8 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                  </svg>
+                </div>
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">LeadershipAI Coach</h4>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  Intelligent multi-agent coaching platform that empowers executives with personalized guidance on emotional intelligence, interpersonal dynamics, strategic decision-making, and personal development goals.
+                </p>
+              </div>
+              
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  <span>Emotional intelligence assessment & training</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  <span>Personalized leadership scenario simulations</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  <span>Goal tracking & progress analytics</span>
+                </div>
+                <div className="flex items-center text-sm text-gray-600">
+                  <div className="w-2 h-2 bg-purple-500 rounded-full mr-3"></div>
+                  <span>Multi-agent advisory council simulation</span>
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 rounded-lg p-4">
+                <p className="text-sm text-gray-600 text-center">
+                  <strong>Currently in Development</strong><br/>
+                  Expected Beta Release: Q4 2025
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-gray-600 mb-4">
+              Interested in early access or partnership opportunities for these applications?
+            </p>
+            <button 
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-teal-500 hover:bg-teal-600 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+            >
+              Get Early Access
+            </button>
+          </div>
+        </div>
+
 
 
         {/* CTA */}
