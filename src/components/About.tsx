@@ -16,20 +16,20 @@ const About: React.FC = () => {
           
           <div>
             <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              Enterprise AI Transformation Partners
+              Disabled Veteran Owned • AI-First Consulting
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Architecting the Future of Enterprise Operations
+              Architecting the Future Through Disciplined AI Strategy
             </h2>
             <div className="w-24 h-1 bg-blue-700 mb-8"></div>
             
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              CloudWest is the only consultancy that integrates AI automation, product development acceleration, and customer experience transformation into cohesive business transformation strategies.
+              CloudWest is a disabled veteran-owned, AI-first consulting firm with a disciplined and strategic focus. We help forward-thinking clients become early adopters by recognizing the transformational value of AI and keeping pace with the latest technological trends.
             </p>
             
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              We architect intelligent business systems that transform how enterprises operate, innovate, and serve customers through custom agentic AI, strategic product development, and next-generation contact experiences.
+              Our specialized services—custom agentic applications, strategic product development, and intelligent contact center solutions—can be engaged independently or in combination, depending on your organization's specific needs and AI readiness.
             </p>
             
             <div className="space-y-4 mb-8">
@@ -47,12 +47,12 @@ const About: React.FC = () => {
               </div>
               <div className="flex items-start">
                 <CheckCircle2 className="h-6 w-6 text-green-500 mr-3 flex-shrink-0 mt-1" />
-                <p className="text-gray-700">50+ successful enterprise AI implementations</p>
+                <p className="text-gray-700">50+ successful AI implementations across industries</p>
               </div>
             </div>
             
             <button className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-8 rounded-md transition-colors transform hover:scale-105">
-              Our Transformation Approach
+              Our AI-First Approach
             </button>
           </div>
         </div>
@@ -61,7 +61,7 @@ const About: React.FC = () => {
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">Why Choose CloudWest?</h3>
             <p className="text-gray-600 max-w-3xl mx-auto text-lg">
-              We combine deep technical expertise with strategic business acumen to deliver AI transformation solutions that exceed enterprise expectations and drive measurable ROI.
+              We combine deep technical expertise with strategic business acumen to deliver AI-first solutions that exceed expectations and drive measurable ROI across organizations of all sizes.
             </p>
           </div>
           
@@ -102,7 +102,7 @@ const About: React.FC = () => {
               </div>
               <h4 className="text-xl font-semibold text-gray-900 mb-3">Measurable ROI</h4>
               <p className="text-gray-600 leading-relaxed">
-                Enterprise-grade solutions with quantifiable business outcomes and continuous performance optimization.
+                AI-first solutions with quantifiable business outcomes and continuous performance optimization across all organizational scales.
               </p>
             </div>
           </div>
@@ -111,29 +111,29 @@ const About: React.FC = () => {
         {/* Unique Market Position */}
         <div className="mt-20 bg-blue-900 rounded-2xl p-12 text-white">
           <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold mb-4">Our Unique Market Position</h3>
+            <h3 className="text-3xl font-bold mb-4">Our AI-First Market Position</h3>
             <p className="text-blue-100 text-lg max-w-4xl mx-auto">
-              The convergence of AI automation, product innovation, and customer experience creates unprecedented opportunities for enterprise transformation.
+              As forward-thinking organizations recognize AI's transformational potential, CloudWest provides the disciplined strategy and technical expertise needed to become successful early adopters.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 text-center">
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-teal-400">End-to-End Transformation</h4>
+              <h4 className="text-xl font-semibold mb-4 text-teal-400">Disciplined AI Strategy</h4>
               <p className="text-blue-100">
-                Complete business transformation capability across three critical enterprise functions
+                Strategic focus on AI implementations that deliver measurable business value and competitive advantage
               </p>
             </div>
             <div>
               <h4 className="text-xl font-semibold mb-4 text-teal-400">Technology-Agnostic Approach</h4>
               <p className="text-blue-100">
-                Vendor-neutral solutions ensuring optimal technology selection for your specific requirements
+                Vendor-neutral solutions ensuring optimal technology selection for your specific requirements and scale
               </p>
             </div>
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-teal-400">Proven Enterprise Experience</h4>
+              <h4 className="text-xl font-semibold mb-4 text-teal-400">Early Adopter Advantage</h4>
               <p className="text-blue-100">
-                Deep expertise in both emerging AI technologies and traditional enterprise system integration
+                Help organizations stay ahead of AI trends and implement cutting-edge solutions before competitors
               </p>
             </div>
           </div>

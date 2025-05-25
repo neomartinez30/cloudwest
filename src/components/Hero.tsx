@@ -20,15 +20,15 @@ const Hero: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div className="text-white">
             <div className="inline-block bg-teal-500/20 text-teal-300 px-4 py-2 rounded-full text-sm font-medium mb-6 animate-fadeIn">
-              Enterprise AI Transformation Partners
+              AI-First Consulting Firm
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 animate-fadeIn">
-              Architect Intelligent Business Systems That <span className="text-teal-400">Transform Operations</span>
+              Architecting the Future Through <span className="text-teal-400">Intelligent AI Solutions</span>
             </h1>
             
             <p className="text-lg md:text-xl text-blue-100 mb-8 animate-fadeIn animation-delay-200">
-              We architect intelligent business systems that transform how enterprises operate, innovate, and serve customers through AI-powered solutions, strategic product development, and next-generation contact experiences.
+              CloudWest is an AI-first consulting firm specializing in custom agentic applications, strategic product development, and intelligent contact center solutions. We help forward-thinking organizations become early adopters by recognizing AI's transformational value.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 animate-fadeIn animation-delay-400 mb-8">

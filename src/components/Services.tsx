@@ -74,14 +74,14 @@ const Services: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-block bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-            Enterprise AI Transformation Services
+            AI-First Consulting Services
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Three Pillars of Business Transformation
+            Specialized AI Solutions for Forward-Thinking Organizations
           </h2>
           <div className="w-24 h-1 bg-blue-700 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-4xl mx-auto">
-            The only consultancy that integrates AI automation, product development acceleration, and customer experience transformation into cohesive business transformation strategies.
+            CloudWest provides three specialized service offerings that can be engaged independently or in combination, helping clients become early adopters and stay ahead of AI trends.
           </p>
         </div>
 
@@ -157,7 +157,7 @@ const Services: React.FC = () => {
 
         {/* ROI Stats */}
         <div className="bg-gradient-to-r from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-8">Proven Results Across Enterprise Transformations</h3>
+          <h3 className="text-2xl font-bold mb-8">Proven Results Across AI Implementations</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             <div>
               <div className="text-3xl font-bold text-teal-400 mb-2">60-80%</div>
@@ -169,7 +169,7 @@ const Services: React.FC = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-teal-400 mb-2">50+</div>
-              <div className="text-blue-100 text-sm">Enterprise Implementations</div>
+              <div className="text-blue-100 text-sm">AI Implementations</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-teal-400 mb-2">3-6x</div>
