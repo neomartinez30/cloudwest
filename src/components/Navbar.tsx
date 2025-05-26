@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,12 +21,22 @@ const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+  const handleNavigation = (path: string, sectionId?: string) => {
+    if (path === '/') {
+      navigate('/');
+      // If we're navigating to a section on the home page
+      if (sectionId) {
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      }
+    } else {
+      navigate(path);
     }
+    setIsOpen(false);
   };
 
   return (
@@ -53,31 +66,31 @@ const Navbar: React.FC = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             <button 
-              onClick={() => scrollToSection('home')}
+              onClick={() => handleNavigation('/', 'home')}
               className={`${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'} transition-colors font-medium`}
             >
               Home
             </button>
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => handleNavigation('/', 'services')}
               className={`${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'} transition-colors font-medium`}
             >
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => handleNavigation('/', 'about')}
               className={`${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'} transition-colors font-medium`}
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('blog')}
+              onClick={() => handleNavigation('/blog')}
               className={`${isScrolled ? 'text-gray-700 hover:text-blue-700' : 'text-white hover:text-blue-200'} transition-colors font-medium`}
             >
               Blog
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNavigation('/', 'contact')}
               className="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded-md transition-colors"
             >
               Contact Us
@@ -99,25 +112,31 @@ const Navbar: React.FC = () => {
         {isOpen && (
           <div className="md:hidden bg-white absolute top-full left-0 w-full shadow-md py-4 px-4 flex flex-col space-y-4 animate-fadeIn">
             <button 
-              onClick={() => scrollToSection('home')}
+              onClick={() => handleNavigation('/', 'home')}
               className="text-gray-700 hover:text-blue-700 transition-colors font-medium py-2"
             >
               Home
             </button>
             <button 
-              onClick={() => scrollToSection('services')}
+              onClick={() => handleNavigation('/', 'services')}
               className="text-gray-700 hover:text-blue-700 transition-colors font-medium py-2"
             >
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('about')}
+              onClick={() => handleNavigation('/', 'about')}
               className="text-gray-700 hover:text-blue-700 transition-colors font-medium py-2"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => handleNavigation('/blog')}
+              className="text-gray-700 hover:text-blue-700 transition-colors font-medium py-2"
+            >
+              Blog
+            </button>
+            <button 
+              onClick={() => handleNavigation('/', 'contact')}
               className="bg-blue-700 hover:bg-blue-800 text-white py-2 px-4 rounded-md transition-colors w-full"
             >
               Contact Us

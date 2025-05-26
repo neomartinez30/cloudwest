@@ -17,80 +17,25 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "The Future of Agentic AI: Autonomous Business Operations in 2025",
-    excerpt: "Explore how agentic AI systems are revolutionizing business operations by autonomously managing complex workflows, making intelligent decisions, and reducing operational overhead by up to 80%.",
-    author: "Alex Morgan",
-    date: "March 15, 2025",
-    readTime: "8 min read",
+    title: "The Future of Contact Centers: The End of 'Press 1'",
+    excerpt: "The contact center is on the brink of a radical transformation powered by Conversational AI, Multimodal Interfaces, Omnichannel Integration, and Agentic Systems. Over the next 5–10 years, contact centers will become predictive, fully conversational, contextually aware, and highly personalized, significantly enhancing both customer experience and operational efficiency.",
+    author: "Neo Martinez",
+    date: "May 15, 2025",
+    readTime: "5 min read",
     category: "AI Innovation",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["Agentic AI", "Automation", "Enterprise AI"],
     featured: true
   },
-  {
-    id: 2,
-    title: "Building Multi-Agent Systems: A Technical Deep Dive",
-    excerpt: "Learn the architectural patterns and best practices for developing multi-agent AI systems that collaborate seamlessly to solve complex business challenges.",
-    author: "Jamie Chen",
-    date: "March 12, 2025",
-    readTime: "12 min read",
-    category: "Technical",
-    image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Multi-Agent", "Architecture", "Development"]
-  },
-  {
-    id: 3,
-    title: "Transforming Customer Experience with Conversational AI",
-    excerpt: "Discover how conversational AI is reshaping customer interactions, reducing response times by 75%, and creating more meaningful customer relationships.",
-    author: "Taylor Reynolds",
-    date: "March 10, 2025",
-    readTime: "6 min read",
-    category: "Customer Experience",
-    image: "https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Conversational AI", "CX", "Contact Centers"]
-  },
-  {
-    id: 4,
-    title: "ROI of AI Implementation: Real-World Case Studies",
-    excerpt: "Analyzing the measurable business impact of AI implementations across industries, with case studies showing 3-6x ROI within the first year.",
-    author: "Jordan Smith",
-    date: "March 8, 2025",
-    readTime: "10 min read",
-    category: "Business Strategy",
-    image: "https://images.pexels.com/photos/7688336/pexels-photo-7688336.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["ROI", "Case Studies", "Business Impact"]
-  },
-  {
-    id: 5,
-    title: "Securing AI Systems: Enterprise Best Practices",
-    excerpt: "Essential security considerations and best practices for deploying AI systems in enterprise environments while maintaining compliance and data protection.",
-    author: "Alex Morgan",
-    date: "March 5, 2025",
-    readTime: "7 min read",
-    category: "Security",
-    image: "https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Security", "Compliance", "Enterprise AI"]
-  },
-  {
-    id: 6,
-    title: "Product Development Acceleration with AI: A Strategic Guide",
-    excerpt: "How AI-powered tools and methodologies are accelerating product development cycles from months to weeks while improving quality and market fit.",
-    author: "Jamie Chen",
-    date: "March 3, 2025",
-    readTime: "9 min read",
-    category: "Product Development",
-    image: "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-    tags: ["Product Strategy", "Development", "Innovation"]
-  }
 ];
 
 const categories = [
-  { name: "All Posts", count: 15, icon: <BookOpen className="h-4 w-4" /> },
-  { name: "AI Innovation", count: 5, icon: <Lightbulb className="h-4 w-4" /> },
-  { name: "Technical", count: 4, icon: <TrendingUp className="h-4 w-4" /> },
-  { name: "Customer Experience", count: 3, icon: <User className="h-4 w-4" /> },
-  { name: "Business Strategy", count: 2, icon: <Tag className="h-4 w-4" /> },
-  { name: "Security", count: 1, icon: <Clock className="h-4 w-4" /> }
+  { name: "All Posts", count: 1, icon: <BookOpen className="h-4 w-4" /> },
+  { name: "AI Innovation", count: 1, icon: <Lightbulb className="h-4 w-4" /> },
+  { name: "Technical", count: 0, icon: <TrendingUp className="h-4 w-4" /> },
+  { name: "Customer Experience", count: 0, icon: <User className="h-4 w-4" /> },
+  { name: "Business Strategy", count: 0, icon: <Tag className="h-4 w-4" /> },
+  { name: "Security", count: 0, icon: <Clock className="h-4 w-4" /> }
 ];
 
 const Blog: React.FC = () => {
