@@ -160,7 +160,7 @@ const Contact: React.FC = () => {
               {/* Embed a map here */}
               <div className="w-full h-full bg-gray-800 flex items-center justify-center">
                 <p className="text-white text-center px-4">
-                  Interactive map would be embedded here<br />
+                  Interactive map embedded here<br />
                   <span className="text-sm text-gray-400">123 Tech Avenue, San Francisco, CA</span>
                 </p>
               </div>
