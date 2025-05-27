@@ -161,7 +161,7 @@ const Contact: React.FC = () => {
               <div className="w-full h-full bg-gray-800 flex items-center justify-center">
                 <p className="text-white text-center px-4">
                   Interactive map embedded here<br />
-                  <span className="text-sm text-gray-400">123 Tech Avenue, San Francisco, CA</span>
+                  <span className="text-sm text-gray-400">Los Angeles, CA</span>
                 </p>
               </div>
             </div>
