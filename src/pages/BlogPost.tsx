@@ -219,7 +219,6 @@ const BlogPost: React.FC = () => {
       </div>
     );
   }
-
   const renderContent = (content: string) => {
     // Split content into paragraphs and render with proper formatting
     const lines = content.trim().split('\n');
@@ -227,23 +226,31 @@ const BlogPost: React.FC = () => {
     return lines.map((line, index) => {
       // Headers
       if (line.startsWith('## ')) {
-        return <h2 key={index} className="text-2xl font-bold text-gray-900 mt-8 mb-4">{line.replace('## ', '')}</h2>;
+        return (
+          <h2 key={index} className="text-3xl font-bold text-gray-900 mt-12 mb-6 pb-2 border-b border-gray-200">
+            {line.replace('## ', '')}
+          </h2>
+        );
       }
       if (line.startsWith('### ')) {
-        return <h3 key={index} className="text-xl font-semibold text-gray-900 mt-6 mb-3">{line.replace('### ', '')}</h3>;
+        return (
+          <h3 key={index} className="text-2xl font-semibold text-gray-900 mt-10 mb-4">
+            {line.replace('### ', '')}
+          </h3>
+        );
       }
       
       // Horizontal rule
       if (line === '---') {
-        return <hr key={index} className="my-8 border-gray-200" />;
+        return <hr key={index} className="my-12 border-gray-300" />;
       }
       
       // Lists
       if (line.startsWith('- ')) {
         return (
-          <li key={index} className="ml-6 mb-2 text-gray-700">
+          <li key={index} className="ml-6 mb-3 text-gray-700 text-lg leading-relaxed">
             <span dangerouslySetInnerHTML={{ 
-              __html: line.replace('- ', '').replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
+              __html: line.replace('- ', '').replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900 font-semibold">$1</strong>') 
             }} />
           </li>
         );
@@ -251,14 +258,14 @@ const BlogPost: React.FC = () => {
       
       // Empty lines
       if (line.trim() === '') {
-        return <br key={index} />;
+        return <div key={index} className="h-4" />;
       }
       
       // Regular paragraphs with bold text support
       return (
-        <p key={index} className="text-gray-700 mb-4 leading-relaxed">
+        <p key={index} className="text-gray-700 mb-6 text-lg leading-relaxed">
           <span dangerouslySetInnerHTML={{ 
-            __html: line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>') 
+            __html: line.replace(/\*\*(.*?)\*\*/g, '<strong class="text-gray-900 font-semibold">$1</strong>') 
           }} />
         </p>
       );
@@ -266,60 +273,66 @@ const BlogPost: React.FC = () => {
   };
 
   return (
-    <div className="pt-20 min-h-screen bg-white">
-      {/* Hero Image */}
-      <div className="relative h-96 bg-gray-900">
+    <div className="pt-20 min-h-screen bg-white">      {/* Hero Image */}
+      <div className="relative h-[500px] bg-gray-900 overflow-hidden">
         <img 
           src={post.image} 
           alt={post.title}
-          className="w-full h-full object-cover opacity-70"
+          className="w-full h-full object-cover opacity-60"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/50 to-transparent"></div>
+        
+        {/* Hero Content */}
+        <div className="absolute inset-0 flex items-end">
+          <div className="container mx-auto px-4 md:px-6 pb-16">
+            <div className="max-w-4xl">
+              {/* Category Badge */}
+              <div className="inline-block bg-blue-600/20 backdrop-blur-sm text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-4 border border-blue-400/30">
+                {post.category}
+              </div>
+              
+              {/* Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                {post.title}
+              </h1>
+              
+              {/* Meta Information */}
+              <div className="flex flex-wrap items-center gap-6 text-gray-300">
+                <div className="flex items-center">
+                  <User className="h-5 w-5 mr-2" />
+                  <span className="font-medium">{post.author}</span>
+                </div>
+                <div className="flex items-center">
+                  <Calendar className="h-5 w-5 mr-2" />
+                  {post.date}
+                </div>
+                <div className="flex items-center">
+                  <Clock className="h-5 w-5 mr-2" />
+                  {post.readTime}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6">
-        {/* Article Header */}
-        <div className="max-w-4xl mx-auto -mt-32 relative z-10">
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12">
+      <div className="container mx-auto px-4 md:px-6 py-12">
+        {/* Article Content */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white">
             {/* Back Button */}
             <button 
               onClick={() => navigate('/blog')}
-              className="flex items-center text-gray-600 hover:text-blue-700 mb-6 transition-colors"
+              className="flex items-center text-gray-600 hover:text-blue-700 mb-8 transition-colors group"
             >
-              <ArrowLeft className="h-4 w-4 mr-2" />
+              <ArrowLeft className="h-4 w-4 mr-2 group-hover:-translate-x-1 transition-transform" />
               Back to Blog
             </button>
-
-            {/* Category Badge */}
-            <div className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
-              {post.category}
-            </div>
-
-            {/* Title */}
-            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              {post.title}
-            </h1>
-
-            {/* Meta Information */}
-            <div className="flex flex-wrap items-center gap-4 text-sm text-gray-600 mb-6">
-              <div className="flex items-center">
-                <User className="h-4 w-4 mr-2" />
-                {post.author}
-              </div>
-              <div className="flex items-center">
-                <Calendar className="h-4 w-4 mr-2" />
-                {post.date}
-              </div>
-              <div className="flex items-center">
-                <Clock className="h-4 w-4 mr-2" />
-                {post.readTime}
-              </div>
-            </div>
 
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-8">
               {post.tags.map((tag, index) => (
-                <span key={index} className="flex items-center bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                <span key={index} className="flex items-center bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full text-sm transition-colors">
                   <Tag className="h-3 w-3 mr-1" />
                   {tag}
                 </span>
@@ -327,43 +340,40 @@ const BlogPost: React.FC = () => {
             </div>
 
             {/* Share Actions */}
-            <div className="flex items-center gap-4 border-t border-b border-gray-200 py-4 mb-8">
-              <button className="flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+            <div className="flex items-center gap-4 border-t border-b border-gray-200 py-6 mb-12">
+              <span className="text-gray-600 font-medium">Share:</span>
+              <button className="flex items-center text-gray-600 hover:text-blue-700 transition-colors px-3 py-2 rounded-lg hover:bg-blue-50">
                 <Share2 className="h-5 w-5 mr-2" />
                 Share
               </button>
-              <button className="flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+              <button className="flex items-center text-gray-600 hover:text-green-700 transition-colors px-3 py-2 rounded-lg hover:bg-green-50">
                 <Bookmark className="h-5 w-5 mr-2" />
                 Save
               </button>
-              <button className="flex items-center text-gray-600 hover:text-blue-700 transition-colors">
+              <button className="flex items-center text-gray-600 hover:text-purple-700 transition-colors px-3 py-2 rounded-lg hover:bg-purple-50">
                 <MessageCircle className="h-5 w-5 mr-2" />
                 Comment
               </button>
+            </div>{/* Article Content */}
+            <div className="prose prose-lg prose-blue max-w-none">
+              <div className="text-gray-700 leading-relaxed">
+                {renderContent(post.content)}
+              </div>
             </div>
 
-            {/* Article Content */}
-            <div className="prose prose-lg max-w-none">
-              {renderContent(post.content)}
-            </div>
-
-            {/* Author Bio */}
-            <div className="mt-12 p-6 bg-gray-50 rounded-xl">
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">About the Author</h4>
-              <div className="flex items-start space-x-4">
-                <img 
-                  src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                  alt={post.author}
-                  className="w-16 h-16 rounded-full object-cover"
-                />
-                <div>
-                  <p className="font-medium text-gray-900">{post.author}</p>
-                  <p className="text-sm text-gray-600 mb-2">AI Strategy Consultant</p>
-                  <p className="text-gray-600">
-                    Neo Martinez is a leading expert in AI transformation with over 10 years of experience 
-                    helping enterprises implement cutting-edge AI solutions.
-                  </p>
-                </div>
+            {/* Call to Action */}
+            <div className="mt-12 p-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+              <div className="text-center">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3">Ready to Transform Your Business with AI?</h4>
+                <p className="text-gray-600 mb-6">
+                  Discover how CloudWest can help you implement cutting-edge AI solutions that drive real results.
+                </p>
+                <button 
+                  onClick={() => navigate('/')}
+                  className="bg-blue-700 hover:bg-blue-800 text-white font-medium py-3 px-6 rounded-lg transition-colors"
+                >
+                  Get Started Today
+                </button>
               </div>
             </div>
           </div>

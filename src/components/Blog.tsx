@@ -1,4 +1,6 @@
+// src/components/Blog.tsx
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Calendar, Clock, User, Tag, Search, ChevronRight, TrendingUp, BookOpen, Lightbulb } from 'lucide-react';
 
 interface BlogPost {
@@ -21,7 +23,7 @@ const blogPosts: BlogPost[] = [
     excerpt: "The contact center is on the brink of a radical transformation powered by Conversational AI, Multimodal Interfaces, Omnichannel Integration, and Agentic Systems. Over the next 5–10 years, contact centers will become predictive, fully conversational, contextually aware, and highly personalized, significantly enhancing both customer experience and operational efficiency.",
     author: "Neo Martinez",
     date: "May 15, 2025",
-    readTime: "5 min read",
+    readTime: "12 min read",
     category: "AI Innovation",
     image: "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     tags: ["Agentic AI", "Automation", "Enterprise AI"],
@@ -41,6 +43,7 @@ const categories = [
 const Blog: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("All Posts");
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
   
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
@@ -52,6 +55,10 @@ const Blog: React.FC = () => {
                          post.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
     return matchesCategory && matchesSearch;
   });
+
+  const handlePostClick = (postId: number) => {
+    navigate(`/blog/${postId}`);
+  };
 
   return (
     <section id="blog" className="pt-20 min-h-screen bg-gray-50">
@@ -77,7 +84,10 @@ const Blog: React.FC = () => {
           <div className="lg:col-span-3">
             {/* Featured Post */}
             {featuredPost && (
-              <div className="mb-12 bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+              <div 
+                className="mb-12 bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                onClick={() => handlePostClick(featuredPost.id)}
+              >
                 <div className="grid md:grid-cols-2">
                   <div className="relative h-64 md:h-auto">
                     <img 
@@ -102,7 +112,7 @@ const Blog: React.FC = () => {
                         {featuredPost.readTime}
                       </span>
                     </div>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-700 transition-colors cursor-pointer">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-3 hover:text-blue-700 transition-colors">
                       {featuredPost.title}
                     </h2>
                     <p className="text-gray-600 mb-4 leading-relaxed">
@@ -113,7 +123,13 @@ const Blog: React.FC = () => {
                         <User className="h-4 w-4 text-gray-400" />
                         <span className="text-sm text-gray-600">{featuredPost.author}</span>
                       </div>
-                      <button className="text-blue-700 hover:text-blue-800 font-medium flex items-center">
+                      <button 
+                        className="text-blue-700 hover:text-blue-800 font-medium flex items-center"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handlePostClick(featuredPost.id);
+                        }}
+                      >
                         Read More <ChevronRight className="h-4 w-4 ml-1" />
                       </button>
                     </div>
@@ -125,7 +141,11 @@ const Blog: React.FC = () => {
             {/* Blog Grid */}
             <div className="grid md:grid-cols-2 gap-6">
               {filteredPosts.map(post => (
-                <article key={post.id} className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden group">
+                <article 
+                  key={post.id} 
+                  className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden group cursor-pointer"
+                  onClick={() => handlePostClick(post.id)}
+                >
                   <div className="relative h-48 overflow-hidden">
                     <img 
                       src={post.image} 
@@ -149,7 +169,7 @@ const Blog: React.FC = () => {
                         {post.readTime}
                       </span>
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-700 transition-colors cursor-pointer">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2 hover:text-blue-700 transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-gray-600 mb-4 line-clamp-3">
@@ -160,7 +180,13 @@ const Blog: React.FC = () => {
                         <User className="h-4 w-4 text-gray-400" />
                         <span className="text-sm text-gray-600">{post.author}</span>
                       </div>
-                      <button className="text-blue-700 hover:text-blue-800 font-medium text-sm flex items-center">
+                      <button 
+                        className="text-blue-700 hover:text-blue-800 font-medium text-sm flex items-center"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          handlePostClick(post.id);
+                        }}
+                      >
                         Read More <ChevronRight className="h-3 w-3 ml-1" />
                       </button>
                     </div>
@@ -229,7 +255,11 @@ const Blog: React.FC = () => {
               <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Posts</h3>
               <div className="space-y-4">
                 {blogPosts.slice(0, 3).map(post => (
-                  <div key={post.id} className="group cursor-pointer">
+                  <div 
+                    key={post.id} 
+                    className="group cursor-pointer"
+                    onClick={() => handlePostClick(post.id)}
+                  >
                     <h4 className="text-sm font-medium text-gray-900 group-hover:text-blue-700 transition-colors mb-1">
                       {post.title}
                     </h4>
