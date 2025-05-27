@@ -21,7 +21,7 @@ const blogPosts: BlogPost[] = [
     id: 1,
     title: "The Future of Contact Centers: The End of 'Press 1'",
     excerpt: "The contact center is on the brink of a radical transformation powered by Conversational AI, Multimodal Interfaces, Omnichannel Integration, and Agentic Systems. Over the next 5–10 years, contact centers will become predictive, fully conversational, contextually aware, and highly personalized, significantly enhancing both customer experience and operational efficiency.",
-    author: "Neo Martinez",
+    author: "R&D Team",
     date: "May 15, 2025",
     readTime: "12 min read",
     category: "AI Innovation",

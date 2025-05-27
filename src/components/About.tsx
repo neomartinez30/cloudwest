@@ -25,11 +25,11 @@ const About: React.FC = () => {
             <div className="w-24 h-1 bg-blue-700 mb-8"></div>
             
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              CloudWest is a disabled veteran-owned, AI-first consulting firm with a disciplined and strategic focus. We help forward-thinking clients become early adopters by recognizing the transformational value of AI and keeping pace with the latest technological trends.
+              CloudWest is a disabled veteran-owned, 'AI-first' consulting firm with a disciplined and strategic focus driving innovation at the intersection of AI, cloud platforms, and customer experience. CloudWest specializes in building custom solutions that integrate conversational AI, multimodal interfaces, and agentic systems.
             </p>
             
             <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Our specialized services—custom agentic applications, strategic product development, and intelligent contact center solutions—can be engaged independently or in combination, depending on your organization's specific needs and AI readiness.
+              CloudWest was founded to help organizations stay up to speed with AI trends—building agentic systems for your unique situation and replacing outdated IVRs with intelligent, emotionally aware voice agents that feel more human than ever. If you're as passionate as we are about the future of customer experience, let's connect.
             </p>
             
             <div className="space-y-4 mb-8">

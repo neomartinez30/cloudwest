@@ -129,21 +129,12 @@ const Contact: React.FC = () => {
           <div>
             <div className="bg-blue-900 text-white rounded-lg shadow-md p-8 mb-8">
               <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
-              
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 mr-4 flex-shrink-0 mt-1" />
-                  <div>
-                    <p className="font-medium">Our Location</p>
-                    <p className="mt-1 text-blue-100">123 Tech Avenue, Suite 200<br />San Francisco, CA 94107</p>
-                  </div>
-                </div>
-                
+          
                 <div className="flex items-start">
                   <Phone className="h-6 w-6 mr-4 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-medium">Phone Number</p>
-                    <p className="mt-1 text-blue-100">(415) 555-0123</p>
+                    <p className="mt-1 text-blue-100">(424) 443-9694</p>
                   </div>
                 </div>
                 
@@ -176,7 +167,6 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 };
